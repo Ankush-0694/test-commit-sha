@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - echo "installing something"
+  pre_build:
+    commands:
+      - echo "we are in pre build"
+  build:
+    commands:
+      - echo "we are in build"
+      - echo $CODEBUILD_SOURCE_VERSION
+  post_build:
+    commands:
+      - echo "we are in post build"
